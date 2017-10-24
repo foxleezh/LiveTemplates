@@ -1,0 +1,28 @@
+<templateSet group="CustomXml">
+  <template name="foo_skin" value="skin:enable=&quot;true&quot;&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="foo_dialog" value="&lt;org.sojex.finance.view.PublicDialog&#10;        android:layout_width=&quot;@dimen/public_dialog_center_width&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:orientation=&quot;vertical&quot;&#10;        app:dl_middleLayout=&quot;@layout/dialog_middle_text&quot;&#10;        app:dl_bottomLayout=&quot;@layout/dialog_bottom_two_withignore&quot;&#10;    /&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="foo_publicform" value="&lt;com.gkoudai.stock.view.publicview.PublicForm&#10;    android:id=&quot;@+id/pf_collection&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;@dimen/public_form_bg_height&quot;&#10;    android:layout_marginTop=&quot;@dimen/first_card_margin&quot;&#10;    app:fm_line_noTop=&quot;true&quot;&#10;    app:fm_line_noBottom=&quot;true&quot;&#10;    app:fm_leftText=&quot;@string/me_collect&quot;&#10;    app:fm_rightSrc=&quot;@drawable/arrow_right&quot;&#10;    app:fm_leftSrc=&quot;@drawable/me_collect&quot;&#10;/&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="foo_titlebar" value="    &lt;com.gkoudai.stock.view.publicview.TitleBar&#10;            android:id=&quot;@+id/titleBar&quot;&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;@dimen/public_title_bg_height&quot;&#10;            app:tb_leftText=&quot;@string/quotes_edit&quot;&#10;            app:tb_rightSrc=&quot;@drawable/circle_search&quot;&#10;            app:tb_title=&quot;@string/main_tab_custom&quot;&#10;        /&gt;" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="foo_data" value="&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&#10;&gt;&#10;    &lt;data&gt;&#10;        &lt;variable&#10;            name=&quot;viewModel&quot;&#10;            type=&quot;$view$&quot; /&gt;&#10;    &lt;/data&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="view" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>

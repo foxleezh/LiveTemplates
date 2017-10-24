@@ -1,0 +1,76 @@
+<templateSet group="Custom">
+  <template name="foo_const_i" value="public static final int $name$ = $value$;" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="variableOfType(&quot;android.content.Context&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="groovyScript(&quot;new Random().nextInt(1000)&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_switch" value="switch ($var$){&#10;    case $var1$:&#10;        break;&#10;    case $var2$:&#10;        break;&#10;    case $var3$:&#10;        break;&#10;    case $var4$:&#10;        break;&#10;    case $var5$:&#10;        break;&#10;    default:&#10;        break;&#10;}" toReformat="true" toShortenFQNames="true">
+    <variable name="var" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="var1" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="var2" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="var3" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="var4" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="var5" expression="variableOfType(&quot;Integer&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_toast" value="ContextUtil.toastTips($context$, &quot;$text$&quot;);&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="context" expression="variableOfType(&quot;android.content.Context&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="foo_form" value="int size = $data$.size();&#10;$module$ module;&#10;for (int i = 0; i &lt; size; i++) {&#10;    module = $data$.get(i);&#10;}&#10;                               " toReformat="false" toShortenFQNames="true">
+    <variable name="data" expression="variableOfType(&quot;java.util.ArrayList&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="guessElementType(data)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_onevent" value="public void onEvent($Class$ event) {&#10;    &#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="Class" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_handler" value="static class MyHandler extends Handler {&#10;    WeakReference&lt;$fragment$&gt; mFragment;&#10;&#10;    MyHandler($fragment$ activity) {&#10;        mFragment = new WeakReference&lt;&gt;(activity);&#10;    }&#10;&#10;    @Override&#10;    public void handleMessage(Message msg) {&#10;        $fragment$ theFragment = mFragment.get();&#10;        if (theFragment == null || theFragment.getActivity()==null) {&#10;            return;&#10;        }&#10;        switch (msg.what) {&#10;            case 0:&#10;                break;&#10;            default:&#10;                break;&#10;        }&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="fragment" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_apimanger" value="$ivew$ view = getView();&#10;if (getView() == null) {&#10;    return;&#10;}&#10;view.showLoading();&#10;Params params = new Params(API.QuoteBatch.rtpType);&#10;params.addParam(API.QuoteBatch.stockIds,&quot;00003_S_K,02266_S_K&quot;);&#10;ApiManager.getInstance(mContext).doApiFromNet(Request.Method.GET, API.MASTER_URL, PublicUtils.getCommonHttpHeader(mContext, params)&#10;        , params, $moduleinfo$.class,&#10;        new ApiManager.ResponseListener&lt;$moduleinfo$&gt;() {&#10;            @Override&#10;            public void onResponse($moduleinfo$ response) {&#10;                if (getView() == null)&#10;                    return;&#10;                $ivew$ view = getView();&#10;                view.dismissLoading();&#10;                if (response != null) {&#10;                    setModelData(response);&#10;                    view.setData(response);&#10;                }&#10;            }&#10;&#10;            @Override&#10;            public void onErrorResponse(VolleyError error) {&#10;                if (getView() == null)&#10;                    return;&#10;                $ivew$ view = getView();&#10;                view.dismissLoading();&#10;                view.showError(PublicUtils.getMsg(error));&#10;            }&#10;&#10;            @Override&#10;            public void onAsyncResponse($moduleinfo$ response) {&#10;&#10;            }&#10;        });&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="ivew" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="moduleinfo" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_ifnull" value="if($value$!=null){&#10;    &#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="value" expression="variableOfType(&quot;java.lang.Object&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="foo_setting_data" value="settingData=SettingData.getInstance(getActivity().getApplicationContext());" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="foo_br" value="$object$=$value$;&#10;notifyPropertyChanged(BR.$object$);" toReformat="false" toShortenFQNames="true">
+    <variable name="object" expression="variableOfType(&quot;java.lang.Object&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
