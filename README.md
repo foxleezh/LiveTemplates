@@ -2,10 +2,11 @@
 Android Studio的LiveTemplates，自定义了一些使用模版
 
 使用方法：
-1.找到C:\Users\Administrator\.AndroidStudio3.0\config\templates目录，不同平台自己对比改下目录，没有templates可以自己新建一个
-2.在templates目录下git clone https://github.com/foxleezh/LiveTemplates
-3.将LiveTemplates的所有内容，包括.git，剪切到templates目录下
-4.重新打开Android Studio，在代码中输入foo，就会有代码提示
+
+1. 找到C:\Users\Administrator\.AndroidStudio3.0\config\templates目录，不同平台自己对比改下目录，没有templates可以自己新建一个
+2. 在templates目录下git clone https://github.com/foxleezh/LiveTemplates
+3. 将LiveTemplates的所有内容，包括.git，剪切到templates目录下
+4. 重新打开Android Studio，在代码中输入foo，就会有代码提示
 
 ![](http://upload-images.jianshu.io/upload_images/3387045-9602ea148b89046c.gif?imageMogr2/auto-orient/strip)
 
