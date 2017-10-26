@@ -1,14 +1,16 @@
 <templateSet group="CustomMarkdown">
-  <template name="foo_C" value="```C&#10;$code$&#10;```" toReformat="false" toShortenFQNames="true">
+  <template name="foo_C" value="```C&#10;$code$&#10;```" description="" toReformat="false" toShortenFQNames="true">
     <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="MARKDOWN" value="true" />
+      <option name="OTHER" value="true" />
     </context>
   </template>
-  <template name="foo_http" value="[]($http$)" toReformat="false" toShortenFQNames="true">
+  <template name="foo_http" value="[]($http$)" description="" toReformat="false" toShortenFQNames="true">
     <variable name="http" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="MARKDOWN" value="true" />
+      <option name="OTHER" value="true" />
     </context>
   </template>
 </templateSet>
